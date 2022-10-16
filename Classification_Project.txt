@@ -1,0 +1,85 @@
+Business needs:
+
+The goal of this project is to conduct a detailed study of each type of star using supervised learning algorithms to be able to determine the type of stars based on their characteristics.
+
+Data Source:
+
+https://www.kaggle.com/brsdincer/star-type-classification. 
+
+Data mining:
+
+Our dataset consists of the set of 240 rows of data, each row of data has 7 columns
+Temperature -- K 
+Relative  luminosity -- L/Lo 
+Relative Radius -- R/Ro 
+Absolute magnitude -- Mv 
+Color -- General Color of Spectrum 
+Spectral Class -- O,B,A,F,G,K,M / SMASS 
+Type -- Red Dwarf, Brown Dwarf, White Dwarf, Main Sequence, Super Giants, Hyper Giants
+
+A part of the dataframe representing the rows and columns of our dataset
+Checking for null variables
+
+Data preparation:
+
+Selection of attributes:
+We decided to select all attributes from our dataset in our study.
+
+Type of algorithm used for the model:
+In order to predict the type of star, there are several classification algorithms that can be used. In fact, when developing our supervised learning models, we will train and evaluate a number of them, and keep those with better prediction performance.
+Logistic regression
+Decision trees
+Random Forests
+
+
+Conclusion:
+
+Classification is a supervised learning approach in which a target variable is discrete (or categorical). Evaluating a machine learning model is as important as building it and includes a range of different metrics with their pros and cons.
+Classification accuracy (accuracy) shows how many predictions are correct.
+In some cases, this represents the quality of a model, but there are cases where the accuracy just isn't good enough.
+Logistic Regression: 0.9831 means that we correctly predicted 98 out of 100 samples. This seems acceptable without knowing the details of the task.
+Desision Tree Classifier: 0.5762
+Random Forest Classifier: 0.9491
+A confusion matrix is ​​not a metric for evaluating a model, but it provides insight into predictions. It is important to learn the confusion matrix in order to understand other classification measures such as precision and recall.
+
+Rate is a measurement factor in a confusion matrix. It also has 4 types TPR, FPR, TNR, FNR.
+For best performance, TPR, TNR should be high and FNR, FPR should be low.
+Logistic Regression: TPR=0.9831, TNR=0.9957 is high and FPR=0.0043, FNR=0.0169 is low. The model is therefore neither underfitted nor overfitted.
+Desision Tree Classifier: TPR=1.0, TNR=1.0 is high and FPR=0.0, FNR=0.0 is low.
+Random Forest Classifier: TPR=0.875 TNR=1.0 is high and FPR=0.0, FNR=0.125 is low.
+
+Assessing the quality of the model by evaluating its performance on test data. Since the model was not trained on this data, this represents an objective assessment of the model. Accuracy and recall metrics take classification accuracy even further and allow us to have a more precise understanding of model evaluation.
+
+The emphasis of accuracy is on positive predictions. It indicates how many positive predictions are true.
+The callback objective is the actual positive classes. It indicates how many positive classes the model is able to predict correctly.
+Logistic Regression: precision=0.9844, recall=0.9831
+Desision Tree Classifier: precision=1.0, recall=1.0
+Random Forest Classifier: precision=1.0, recall=0.875
+
+There is another metric that combines precision and recall into one number and that is the F1 score, the weighted average of precision and recall.
+It is used to measure test accuracy. It is a weighted average of precision and recall. When the F1 score is 1, it is the best and on 0, it is the worst.
+
+Logistic Regression: score F1=0.9826
+Desision Tree Classifier: score F1=0.4975
+Random Forest Classifier: score F1=0.9484
+Sensitivity, also known as true positive rate (TPR), is the same as recall. Therefore, it measures the proportion of positive class that is correctly predicted as positive.
+Specificity is similar to sensitivity but focused on the negative class. It measures the proportion of negative class that is correctly predicted as negative.
+Logistic Regression: TPR=0.9831,TNR=0.9957
+Desision Tree Classifier: TPR=1.0,TNR=1.0
+Random Forest Classifier: TPR=0.875,TNR=1.0
+Logistic regression gives the probability that a sample is positive. Then we set a threshold value to this probability to distinguish between positive and negative classes. If the probability is greater than the threshold value, the sample is classified as positive. Therefore, different threshold values ​​cause some samples to be classified differently, which in turn changes precision and recall metrics.
+
+It is possible to use another metric called AUC (Area Under the Curve).
+AUC is the area under the ROC curve between (0.0) and (1.1) which can be calculated using integral calculus. The AUC essentially aggregates the performance of the model at all threshold values. The best possible value of AUC is 1, which indicates a perfect classifier. The closer the AUC is to 1, the better the classifier.
+Logistic Regression: AUC=1.0
+Desision Tree Classifier: AUC=1.0
+Random Forest Classifier: AUC=0.9865
+
+
+Altogether, it is possible to see that the Logistic Regression model presents the said
+best dataset.
+
+
+
+
+
