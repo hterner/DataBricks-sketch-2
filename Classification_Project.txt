@@ -76,9 +76,6 @@ Desision Tree Classifier: AUC=1.0
 Random Forest Classifier: AUC=0.9865
 
 
-Altogether, it is possible to see that the Logistic Regression model presents the said
-best dataset.
-
 
 
 
